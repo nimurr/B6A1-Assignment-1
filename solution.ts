@@ -40,7 +40,7 @@ const getLength = (value: string | string[] | number[] | any[]) => {
 // const person1 = new Person("Nerob" , 24);
 // console.log(person1.getDetails());
 
-
+ 
 
 //? Solution 4 :-
 
