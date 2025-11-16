@@ -26,6 +26,7 @@ const getLength = (value: string | string[] | number[] | any[]) => {
 
 }
 
+
 //? Solution 3 :-
 //!hold this solution
 
@@ -39,9 +40,17 @@ const getLength = (value: string | string[] | number[] | any[]) => {
 // const person1 = new Person("Nerob" , 24);
 // console.log(person1.getDetails());
 
+
+
 //? Solution 4 :-
 
 const filterByRating = (data: { title: string, rating: number }[]) => {
     return data.filter((item) => item.rating >= 4);
+}
+
+//? Solution 5 :-
+
+const filterActiveUsers = (data : {id : number , name : string , email : string , isActive : boolean }[]) =>{
+    return data.filter((item) => item.isActive)
 }
 
