@@ -27,9 +27,10 @@ const getLength = (value: string | string[] | number[] | any[]) => {
 }
 
 //? Solution 3 :-
+//!hold this solution
 
 // class Person {
-//     constructor(public name: string, public age: number) { }
+//     constructor(public name: string, public age: number) {}
 //     getDetails(){
 //         return `Name: ${this.name}, Age: ${this.age}`
 //     }
@@ -38,15 +39,20 @@ const getLength = (value: string | string[] | number[] | any[]) => {
 // const person1 = new Person("Nerob" , 24);
 // console.log(person1.getDetails());
 
+//? Solution 4 :-
 
-class Person {
-  constructor(public name: string, public age: number) {}
+// const filterByRating = (movies: { title: string, rating: number }[]) => {
+//     return movies.filter((movie) => movie.rating >= 4);
+// }
 
-  getDetails() {
-    return `Name: ${this.name}, Age: ${this.age}`;
-  }
+const filterByRating = (data : {title : string , rating : number }[])=>{
+    return data.filter((item)=> item.rating >= 4);
 }
 
-// Example usage:
-const person1 = new Person("Nimur Rahman", 22);
-console.log(person1.getDetails());
+const books = [
+  { title: 'Book A', rating: 4.5 },
+  { title: 'Book B', rating: 3.2 },
+  { title: 'Book C', rating: 5.0 },
+];
+
+console.log(filterByRating(books));
