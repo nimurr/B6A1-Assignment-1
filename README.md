@@ -9,7 +9,7 @@
    <br />
    Ans:- 
    Interface is mainly used for defining object shapes. A type can represent unions, primitives, tuples, and more - not just objects. An interface supports declaration merging, but a type does not. An interface uses extends for inheritance, a type uses intersection (&). Generally speaking, types are more flexible while interfaces are more structured toward oop.
-
+ <br />
 <strong> 
 <i>2. What is the use of the keyof keyword in TypeScript? Provide an example.
 </i>
@@ -20,7 +20,7 @@
    *It helps with type-safe property access. 
    *It is commonly used with generics for reusable and safe utility functions.
 
-
+ <br />
 <strong> 
 <i>3. Explain the difference between any, unknown, and never types in TypeScript.</i>
 </strong> 
@@ -37,7 +37,7 @@
     *A value that will never occur - for example an endless loop or an always thrown error. 
     *Used for functions that never return 
 
-
+ <br />
 <strong> 
 <i>4. What is the use of enums in TypeScript? Provide an example of a numeric and string enum.</i>
 </strong> 
@@ -51,7 +51,7 @@
     User = "USER",
     Guest = "GUEST"
     }
-
+ <br />
 <strong> 
 <i>5. Provide an example of using union and intersection types in TypeScript.
 </i>
