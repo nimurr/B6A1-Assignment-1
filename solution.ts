@@ -1,4 +1,4 @@
-//?----------------- Solution 1 -----------------
+//?------------------------------- Solution 1 -------------------------------
 
 const formatValue = (value: string | number | boolean) => {
     if (typeof value === "string") {
@@ -13,7 +13,7 @@ const formatValue = (value: string | number | boolean) => {
 
 
 
-//?----------------- Solution 2 -----------------
+//?------------------------------- Solution 2 -------------------------------
 
 const getLength = (value: string | string[] | number[] | any[]) => {
 
@@ -26,7 +26,7 @@ const getLength = (value: string | string[] | number[] | any[]) => {
 
 }
 
-//?-------------- Solution 3 -----------------
+//?------------------------------- Solution 3 -------------------------------
 
 class Person {
     name: string;
@@ -41,19 +41,19 @@ class Person {
 }
 
 
-//?----------------- Solution 4 -----------------
+//?------------------------------- Solution 4 -------------------------------
 
 const filterByRating = (data: { title: string, rating: number }[]) => {
     return data.filter((item) => item.rating >= 4);
 }
 
-//?----------------- Solution 5 -----------------
+//?------------------------------- Solution 5 -------------------------------
 
 const filterActiveUsers = (data: { id: number, name: string, email: string, isActive: boolean }[]) => {
     return data.filter((item) => item.isActive)
 }
 
-//?----------------- Solution 6 -----------------
+//?------------------------------- Solution 6 -------------------------------
 
 interface Book {
     title: string;
@@ -66,4 +66,35 @@ const printBookDetails = (book: Book) => {
     console.log(`Title: ${book.title}, Author: ${book.author}, Published : ${book.publishedYear} , Available : ${book.isAvailable ? "Yes" : "No"}`)
 }
 
-//?----------------- Solution 7 -----------------
+
+
+//?-------------------------------Solution 7 -------------------------------
+//! hold this problem
+// You are not allowed to use any built-in methods to solve this problem.
+
+const getUniqueValues = (arr1: (number[] | string[]), arr2: (number[] | string[])) => {
+    // const uniqueValues = ;
+}
+
+const array1 = [1, 2, 3, 4, 4, 5];
+const array2 = [3, 4, 5, 6, 7, 8, 7];
+console.log(getUniqueValues(array1, array2));
+
+
+//?----------------- Solution 8 -----------------
+
+type Product = {
+    name: string,
+    price: number,
+    quantity: number,
+    discount?: number
+}
+
+const calculateTotalPrice = (data: Product[]): number => {
+    const totalPrice = data?.reduce((total, item) => {
+        const totalPriceEachItem = (item.price * item?.quantity) - (item?.discount ?? 0);
+        return total + totalPriceEachItem;
+    }, 0)
+    return totalPrice;
+}
+
