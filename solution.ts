@@ -36,10 +36,11 @@ class Person {
         this.age = age;
     }
     getDetails() {
-        return `Name: ${this.name}, Age: ${this.age} `;
+        return `'Name: ${this.name}, Age: ${this.age}'`;
     }
 }
-
+const person1 = new Person("John", 30);
+console.log(person1.getDetails());
 
 //?------------------------------- Solution 4 -------------------------------
 
@@ -85,7 +86,7 @@ const getUniqueValues = (arr1: (number[] | string[]), arr2: (number[] | string[]
 }
 const array1 = [1, 2, 3, 4, 4, 5];
 const array2 = [3, 4, 5, 6, 7, 8, 7];
-console.log(getUniqueValues(array1, array2));
+// console.log(getUniqueValues(array1, array2));
 
 
 //?------------------------------- Solution 8 -------------------------------
