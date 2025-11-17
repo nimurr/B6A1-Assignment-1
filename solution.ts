@@ -72,10 +72,17 @@ const printBookDetails = (book: Book) => {
 //! hold this problem
 // You are not allowed to use any built-in methods to solve this problem.
 
-const getUniqueValues = (arr1: (number[] | string[]), arr2: (number[] | string[])) => {
-    // const uniqueValues = ;
-}
 
+const getUniqueValues = (arr1: (number[] | string[]), arr2: (number[] | string[])) => {
+    const result = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                result.push(arr1[i]);
+            }
+        }
+    }
+}
 const array1 = [1, 2, 3, 4, 4, 5];
 const array2 = [3, 4, 5, 6, 7, 8, 7];
 console.log(getUniqueValues(array1, array2));
@@ -89,19 +96,12 @@ type Product = {
     quantity: number,
     discount?: number
 }
-
 const calculateTotalPrice = (data: Product[]): number => {
     const totalPrice = data?.reduce((total, item) => {
-        const totalPriceEachItem = (item.price * item?.quantity) - (item?.discount ?? 0);
+        const discountAmount = item.discount ? (item.price * (item.discount ?? 0)) / 100 : 0;
+        const totalPriceEachItem = (item?.price - discountAmount) * item?.quantity;
         return total + totalPriceEachItem;
+
     }, 0)
     return totalPrice;
 }
-
-const products = [
-  { name: 'Pen', price: 10, quantity: 4 },
-  { name: 'Notebook', price: 25, quantity: 3, discount: 50 },
-  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
-];
-
-console.log(calculateTotalPrice(products));
