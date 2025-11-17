@@ -1,7 +1,5 @@
 <h2>Question and Answer</h2>
 <br />
-<br />
-
 
 <strong> 
 <i> 1. What are some differences between interfaces and types in TypeScript?</i>
