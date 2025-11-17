@@ -18,14 +18,14 @@
 3. Explain the difference between any, unknown, and never types in TypeScript.
    <br />
     Ans:- 
-    # any 
+    <h4> any</h2> 
     *Anything goes. 
     *Type checking is not performed. 
     *The monst safe option. 
-    # unknown 
+    <h4>unknown</h2> 
     *Anything goes, but you need to perform type checking before you can use the value. 
     *Safer alternative to any. 
-    # never 
+    <h4>never</h2>  
     *A value that will never occur - for example an endless loop or an always thrown error. 
     *Used for functions that never return 
 
