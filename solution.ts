@@ -55,3 +55,27 @@ const filterByRating = (data: { title: string, rating: number }[]) => {
 const filterActiveUsers = (data: { id: number, name: string, email: string, isActive: boolean }[]) => {
     return data.filter((item) => item.isActive)
 }
+
+//? Solution 6 :-
+
+interface Book {
+    title: string;
+    author: string;
+    publishedYear: number;
+    isAvailable?: boolean;
+}
+
+
+const printBookDetails = (book: Book) => {
+    console.log(`Title: ${book.title}, Author: ${book.author}, Published : ${book.publishedYear} , Available : ${book.isAvailable ? "Yes" : "No"}`) 
+}
+
+
+const myBook: Book = {
+    title: 'The Great Gatsby',
+    author: 'F. Scott Fitzgerald',
+    publishedYear: 1925,
+    isAvailable: true,
+};
+
+printBookDetails(myBook);
