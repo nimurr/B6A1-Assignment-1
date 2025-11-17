@@ -39,8 +39,7 @@ class Person {
         return `'Name: ${this.name}, Age: ${this.age}'`;
     }
 }
-const person1 = new Person("John", 30);
-console.log(person1.getDetails());
+
 
 //?------------------------------- Solution 4 -------------------------------
 
@@ -74,19 +73,33 @@ const printBookDetails = (book: Book) => {
 // You are not allowed to use any built-in methods to solve this problem.
 
 
-const getUniqueValues = (arr1: (number[] | string[]), arr2: (number[] | string[])) => {
-    const result = [];
-    for (let i = 0; i < arr1.length; i++) {
-        for (let j = 0; j < arr2.length; j++) {
-            if (arr1[i] === arr2[j]) {
-                result.push(arr1[i]);
+const getUniqueValues = (arr1: (number[] | string[]), arr2: (number[] | string[])): (number | string)[] => {
+    const result: (number | string)[] = [];
+
+    function exists(value: number | string): boolean {
+        for (let i = 0; i < result?.length; i++) {
+            if (result[i] === value) {
+                return true;
             }
         }
+        return false;
     }
+
+    for (let i = 0; i < arr1.length; i++) {
+        if (!exists(arr1[i])) {
+            result.push(arr1[i]);
+        }
+    }
+
+    for (let i = 0; i < arr2.length; i++) {
+        if (!exists(arr2[i])) {
+            result?.push(arr2[i]);
+        }
+    }
+
+    return result;
+
 }
-const array1 = [1, 2, 3, 4, 4, 5];
-const array2 = [3, 4, 5, 6, 7, 8, 7];
-// console.log(getUniqueValues(array1, array2));
 
 
 //?------------------------------- Solution 8 -------------------------------
