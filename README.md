@@ -20,9 +20,9 @@
 </strong> 
    <br />
    Ans:- 
-   *keyof creates a union type of all keys from an object type. 
-   *It helps with type-safe property access. 
-   *It is commonly used with generics for reusable and safe utility functions.
+   keyof creates a union type of all keys from an object type. 
+   It helps with type-safe property access. 
+   It is commonly used with generics for reusable and safe utility functions.
 
 
 
@@ -65,7 +65,7 @@
     }
 
 
-    
+
  <br />
  <br />
 <strong> 
