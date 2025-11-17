@@ -27,20 +27,22 @@ const getLength = (value: string | string[] | number[] | any[]) => {
 }
 
 
+
 //? Solution 3 :-
-//!hold this solution
 
-// class Person {
-//     constructor(public name: string, public age: number) {}
-//     getDetails(){
-//         return `Name: ${this.name}, Age: ${this.age}`
-//     }
-// }
+class Person {
+    name: string;
+    age: number;
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+    getDetails() {
+        return `Name: ${this.name}, Age: ${this.age} `;
+    }
+}
 
-// const person1 = new Person("Nerob" , 24);
-// console.log(person1.getDetails());
 
- 
 
 //? Solution 4 :-
 
@@ -50,7 +52,6 @@ const filterByRating = (data: { title: string, rating: number }[]) => {
 
 //? Solution 5 :-
 
-const filterActiveUsers = (data : {id : number , name : string , email : string , isActive : boolean }[]) =>{
+const filterActiveUsers = (data: { id: number, name: string, email: string, isActive: boolean }[]) => {
     return data.filter((item) => item.isActive)
 }
-
