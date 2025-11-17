@@ -1,4 +1,4 @@
-//? Solution 1 :-
+//?----------------- Solution 1 -----------------
 
 const formatValue = (value: string | number | boolean) => {
     if (typeof value === "string") {
@@ -13,7 +13,7 @@ const formatValue = (value: string | number | boolean) => {
 
 
 
-//? Solution 2 :-
+//?----------------- Solution 2 -----------------
 
 const getLength = (value: string | string[] | number[] | any[]) => {
 
@@ -26,9 +26,7 @@ const getLength = (value: string | string[] | number[] | any[]) => {
 
 }
 
-
-
-//? Solution 3 :-
+//?-------------- Solution 3 -----------------
 
 class Person {
     name: string;
@@ -43,20 +41,19 @@ class Person {
 }
 
 
-
-//? Solution 4 :-
+//?----------------- Solution 4 -----------------
 
 const filterByRating = (data: { title: string, rating: number }[]) => {
     return data.filter((item) => item.rating >= 4);
 }
 
-//? Solution 5 :-
+//?----------------- Solution 5 -----------------
 
 const filterActiveUsers = (data: { id: number, name: string, email: string, isActive: boolean }[]) => {
     return data.filter((item) => item.isActive)
 }
 
-//? Solution 6 :-
+//?----------------- Solution 6 -----------------
 
 interface Book {
     title: string;
@@ -65,17 +62,8 @@ interface Book {
     isAvailable?: boolean;
 }
 
-
 const printBookDetails = (book: Book) => {
-    console.log(`Title: ${book.title}, Author: ${book.author}, Published : ${book.publishedYear} , Available : ${book.isAvailable ? "Yes" : "No"}`) 
+    console.log(`Title: ${book.title}, Author: ${book.author}, Published : ${book.publishedYear} , Available : ${book.isAvailable ? "Yes" : "No"}`)
 }
 
-
-const myBook: Book = {
-    title: 'The Great Gatsby',
-    author: 'F. Scott Fitzgerald',
-    publishedYear: 1925,
-    isAvailable: true,
-};
-
-printBookDetails(myBook);
+//?----------------- Solution 7 -----------------
