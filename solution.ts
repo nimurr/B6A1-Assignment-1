@@ -81,7 +81,7 @@ const array2 = [3, 4, 5, 6, 7, 8, 7];
 console.log(getUniqueValues(array1, array2));
 
 
-//?----------------- Solution 8 -----------------
+//?------------------------------- Solution 8 -------------------------------
 
 type Product = {
     name: string,
@@ -98,3 +98,10 @@ const calculateTotalPrice = (data: Product[]): number => {
     return totalPrice;
 }
 
+const products = [
+  { name: 'Pen', price: 10, quantity: 4 },
+  { name: 'Notebook', price: 25, quantity: 3, discount: 50 },
+  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
+];
+
+console.log(calculateTotalPrice(products));
